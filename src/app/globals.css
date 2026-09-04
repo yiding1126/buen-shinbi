@@ -1,26 +1,31 @@
 @import "tailwindcss";
 
+/*
+ * 固定ライトパレット。武縁心美2027は常に白・生成り・淡紫・墨色・#7e4b8dの
+ * 世界観で表示する。prefers-color-scheme: dark には対応しない。
+ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-background: #ffffff;
+  --color-background-warm: #faf6f0;
+  --color-background-lavender: #f5eff8;
+  --color-ink: #221f1f;
+  --color-primary: #7e4b8d;
+  --color-primary-soft: #efe4f2;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-background: var(--color-background);
+  --color-background-warm: var(--color-background-warm);
+  --color-background-lavender: var(--color-background-lavender);
+  --color-ink: var(--color-ink);
+  --color-primary: var(--color-primary);
+  --color-primary-soft: var(--color-primary-soft);
+  --font-serif: var(--font-serif);
+  --font-sans: var(--font-sans);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-background);
+  color: var(--color-ink);
+  font-family: var(--font-serif), "Hiragino Mincho ProN", "Yu Mincho", serif;
 }
