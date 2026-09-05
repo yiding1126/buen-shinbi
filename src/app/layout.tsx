@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { fontSans, fontSerif } from "@/lib/fonts";
+import { SHOW_FIXED_CTA } from "@/lib/config";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -13,7 +14,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="ja"
       className={`${fontSerif.variable} ${fontSans.variable} h-full antialiased motion-safe:scroll-smooth`}
     >
-      <body className="min-h-full flex flex-col bg-background text-ink">
+      <body
+        className={`min-h-full flex flex-col bg-background text-ink ${
+          SHOW_FIXED_CTA ? "pb-14 lg:pb-0" : ""
+        }`}
+      >
         {children}
       </body>
     </html>

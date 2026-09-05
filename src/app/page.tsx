@@ -1,3 +1,4 @@
+import { FixedCta } from "@/components/layout/FixedCta";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { Access } from "@/components/sections/Access";
@@ -30,6 +31,7 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
+      <FixedCta />
     </>
   );
 }
