@@ -4,6 +4,7 @@ import { Enjoy } from "@/components/sections/Enjoy";
 import { EventInfo } from "@/components/sections/EventInfo";
 import { Hero } from "@/components/sections/Hero";
 import { Perform } from "@/components/sections/Perform";
+import { Program } from "@/components/sections/Program";
 import { Watch } from "@/components/sections/Watch";
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
         <Enjoy />
         <Perform />
         <Watch />
+        <Program />
       </main>
     </>
   );
