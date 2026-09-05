@@ -27,10 +27,9 @@ export function Hero() {
             className="h-auto w-full"
           />
         </FadeIn>
-        <FadeIn className="flex items-center justify-center bg-primary py-12">
+        <FadeIn className="flex items-center justify-center bg-background-warm py-12">
           <CtaButton
             href={participation.applicationFormUrl}
-            variant="inverted"
             size="large"
           >
             出演を申し込む
