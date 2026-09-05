@@ -48,8 +48,8 @@ export function Hero() {
 
       <Container className="relative z-10 flex min-h-[75svh] flex-col items-center justify-center gap-7 pt-14 pb-16 text-center lg:min-h-[80svh]">
         <FadeIn className="flex w-full flex-col items-center gap-7">
-          {/* モバイル: デザイン画像をそのまま使用 */}
-          <div className="w-full md:hidden">
+          {/* モバイル: デザイン画像を画面幅いっぱいに表示（Containerの左右余白を打ち消す） */}
+          <div className="-mx-6 w-[calc(100%+3rem)] md:hidden">
             <h1 className="sr-only">{event.name}</h1>
             <p className="sr-only">
               {event.type}／{event.dateLabel}　開場{event.doorsOpenLabel}・
