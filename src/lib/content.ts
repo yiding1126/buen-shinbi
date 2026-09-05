@@ -9,6 +9,7 @@ export const event = {
   tagline: ["武がつなぐ、", "人と、心と、未来へ。"],
   type: "太極拳・中国武術 演武交流会",
   dateLabel: "2027年5月30日（日）",
+  dateShort: "2027.5.30 SUN",
   timeLabel: "10:00〜16:00（予定）",
   admissionLabel: "入場無料",
   registrationNote: "事前申込不要",
