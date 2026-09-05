@@ -19,6 +19,11 @@ export const event = {
 
 export const venue = {
   name: "豊中市立文化芸術センター 中ホール（アクア文化ホール）",
+  // EVENT/ACCESSでは画面幅で切れないよう2行に分けて表示する
+  nameLines: ["豊中市立文化芸術センター", "中ホール（アクア文化ホール）"] as [
+    string,
+    string,
+  ],
   postalCode: "561-0802",
   address: "大阪府豊中市曽根東町3-7-2",
   accessLabel: "阪急宝塚線「曽根」駅より徒歩約5分",

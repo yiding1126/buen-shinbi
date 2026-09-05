@@ -8,12 +8,12 @@ import { event, organizer, venue } from "@/lib/content";
 const rows = [
   {
     label: "日時",
-    value: `${event.dateLabel}　開場${event.doorsOpenLabel}／開演${event.timeLabel}`,
+    lines: [event.dateLabel, `開場${event.doorsOpenLabel}／開演${event.timeLabel}`],
     Icon: CalendarIcon,
   },
   {
     label: "会場",
-    value: venue.name,
+    lines: venue.nameLines,
     Icon: PinIcon,
   },
 ];
@@ -26,7 +26,7 @@ export function EventInfo() {
           <SectionHeading eyebrow="EVENT" title="開催概要" />
 
           <div className="flex flex-col divide-y divide-ink/10 border-y border-ink/10">
-            {rows.map(({ label, value, Icon }) => (
+            {rows.map(({ label, lines, Icon }) => (
               <div key={label} className="flex items-start gap-4 py-6">
                 <Icon className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
                 <div className="flex flex-col gap-1">
@@ -34,7 +34,11 @@ export function EventInfo() {
                     {label}
                   </span>
                   <span className="font-serif text-lg text-ink md:text-xl">
-                    {value}
+                    {lines.map((line, index) => (
+                      <span key={index} className="block">
+                        {line}
+                      </span>
+                    ))}
                   </span>
                 </div>
               </div>

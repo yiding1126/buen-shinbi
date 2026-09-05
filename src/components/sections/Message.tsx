@@ -18,8 +18,8 @@ export function Message() {
         className="absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 md:h-96 md:w-96"
       />
 
-      <Container className="relative z-10 py-20 text-center md:py-28">
-        <FadeIn className="mx-auto flex max-w-2xl flex-col items-center gap-10">
+      <Container className="relative z-10 py-20 md:py-28">
+        <FadeIn className="mx-auto flex max-w-2xl flex-col gap-10">
           <SectionHeading eyebrow="MESSAGE" title="主催者メッセージ" />
 
           <p className="font-serif text-lg leading-loose text-ink md:text-xl">

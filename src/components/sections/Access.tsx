@@ -18,7 +18,9 @@ export function Access() {
           <SectionHeading eyebrow="ACCESS" title="会場・アクセス" />
 
           <div className="flex flex-col gap-1 font-serif text-lg text-ink md:text-xl">
-            <p>{venue.name}</p>
+            {venue.nameLines.map((line, index) => (
+              <p key={index}>{line}</p>
+            ))}
             <p className="text-base text-ink/70 md:text-lg">
               〒{venue.postalCode}　{venue.address}
             </p>
