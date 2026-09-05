@@ -33,7 +33,8 @@ export const participation = {
   teamMinSize: 6,
   performanceTimeLimitMinutes: 4,
   feePerPersonPerTeamYen: 3000,
-  applicationFormUrl: "https://forms.gle/86AseiD97eNuhNEQA",
+  // 開催要綱PDF（2027/8/29版）記載のURL。旧URLと同一フォームへのリンクと確認済み。
+  applicationFormUrl: "https://forms.gle/4PfUFVXJBpQ99P6s7",
   applicationDeadlineLabel: "2027年3月31日（水）",
   paymentMethod: "銀行振込",
 } as const;
