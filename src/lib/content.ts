@@ -21,6 +21,7 @@ export const venue = {
   address: "大阪府豊中市曽根東町3-7-2",
   accessLabel: "阪急宝塚線「曽根」駅より徒歩約5分",
   parkingLabel: "地下駐車場64台（有料）／最初30分無料、以降30分毎100円",
+  googleMapsUrl: "https://maps.app.goo.gl/qHYuYZYDZBVzQuNX9",
 } as const;
 
 export const organizer = {

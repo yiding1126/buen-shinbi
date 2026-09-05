@@ -6,13 +6,14 @@ import { MobileNav } from "./MobileNav";
 
 // 同一ページ内アンカー。各セクション実装時は対応するidに
 // scroll-mt-16 md:scroll-mt-20（固定Header分の余白）を必ず付与する。
-// ACCESS / CONTACTは未実装のため、実装後にリンクを追加する。
 export const navLinks = [
   { href: "#concept", label: "武縁心美とは" },
   { href: "#event", label: "開催概要" },
   { href: "#perform", label: "出演する" },
   { href: "#watch", label: "観に行く" },
   ...(SHOW_PROGRAM ? [{ href: "#program", label: "プログラム" }] : []),
+  { href: "#access", label: "アクセス" },
+  { href: "#contact", label: "お問い合わせ" },
 ];
 
 export function Header() {
