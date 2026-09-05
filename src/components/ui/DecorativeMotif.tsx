@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 
 type DecorativeMotifProps = {
   src: string;
@@ -22,11 +25,33 @@ export function DecorativeMotif({
   fit = "contain",
   position = "center",
 }: DecorativeMotifProps) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const node = ref.current;
+    if (!node) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 },
+    );
+
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div
+      ref={ref}
       aria-hidden={alt === "" ? true : undefined}
-      style={{ opacity }}
-      className={`pointer-events-none select-none ${className}`}
+      style={{ opacity: visible ? opacity : 0 }}
+      className={`pointer-events-none select-none transition-opacity duration-[1400ms] ease-out motion-reduce:transition-none ${className}`}
     >
       <Image
         src={src}
