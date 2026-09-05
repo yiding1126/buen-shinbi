@@ -6,10 +6,11 @@
  */
 :root {
   --color-background: #ffffff;
-  --color-background-warm: #faf6f0;
-  --color-background-lavender: #f5eff8;
-  --color-ink: #221f1f;
+  --color-background-warm: #faf7f1;
+  --color-background-lavender: #ede3f0;
+  --color-ink: #171417;
   --color-primary: #7e4b8d;
+  --color-primary-deep: #5d326e;
   --color-primary-soft: #efe4f2;
 }
 
@@ -19,6 +20,7 @@
   --color-background-lavender: var(--color-background-lavender);
   --color-ink: var(--color-ink);
   --color-primary: var(--color-primary);
+  --color-primary-deep: var(--color-primary-deep);
   --color-primary-soft: var(--color-primary-soft);
   --font-serif: var(--font-serif);
   --font-sans: var(--font-sans);
