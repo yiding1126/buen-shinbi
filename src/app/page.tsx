@@ -6,7 +6,6 @@ import { Concept } from "@/components/sections/Concept";
 import { Contact } from "@/components/sections/Contact";
 import { Enjoy } from "@/components/sections/Enjoy";
 import { EventInfo } from "@/components/sections/EventInfo";
-import { FinalAction } from "@/components/sections/FinalAction";
 import { Hero } from "@/components/sections/Hero";
 import { Message } from "@/components/sections/Message";
 import { Perform } from "@/components/sections/Perform";
@@ -27,7 +26,6 @@ export default function Home() {
         <Program />
         <Access />
         <Message />
-        <FinalAction />
         <Contact />
       </main>
       <Footer />

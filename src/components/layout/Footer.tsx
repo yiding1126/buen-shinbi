@@ -1,4 +1,5 @@
 import { Container } from "@/components/ui/Container";
+import { InstagramIcon, YoutubeIcon } from "@/components/ui/icons";
 import { event, organizer, social } from "@/lib/content";
 import { links } from "@/lib/links";
 
@@ -10,29 +11,30 @@ export function Footer() {
           <span className="font-sans text-xs tracking-widest text-primary">
             FOLLOW US
           </span>
-          <div className="flex flex-col items-center gap-2 font-sans text-sm text-ink/70 sm:flex-row sm:gap-6">
+          <div className="flex items-center gap-5">
             <a
               href={social.instagram.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="transition-colors duration-300 hover:text-primary"
+              aria-label={social.instagram.label}
+              className="text-ink/70 transition-colors duration-300 hover:text-primary"
             >
-              {social.instagram.label}
+              <InstagramIcon className="h-6 w-6" />
             </a>
             <a
               href={social.youtube.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="transition-colors duration-300 hover:text-primary"
+              aria-label={social.youtube.label}
+              className="text-ink/70 transition-colors duration-300 hover:text-primary"
             >
-              {social.youtube.label}
+              <YoutubeIcon className="h-6 w-6" />
             </a>
           </div>
         </div>
 
         <div className="flex flex-col items-center gap-2 font-serif text-sm text-ink/70">
           <p>{event.name}</p>
-          <p>{event.type}</p>
           <p>
             主催　{organizer.organizerName}／主管　{organizer.supervisorName}
           </p>

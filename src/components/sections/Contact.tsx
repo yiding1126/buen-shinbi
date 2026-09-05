@@ -11,13 +11,14 @@ export function Contact() {
         <FadeIn className="mx-auto flex max-w-2xl flex-col gap-8">
           <SectionHeading eyebrow="CONTACT" title="お問い合わせ" />
 
-          <p className="font-serif text-lg text-ink md:text-xl">
-            武縁心美2027 実行委員会
-          </p>
-
-          <p className="font-serif text-base text-ink/80 md:text-lg">
-            {contact.email}
-          </p>
+          <div className="flex flex-col gap-1">
+            <p className="font-serif text-lg text-ink md:text-xl">
+              武縁心美2027 実行委員会
+            </p>
+            <p className="font-serif text-base text-ink/80 md:text-lg">
+              {contact.email}
+            </p>
+          </div>
 
           <CtaButton href={`mailto:${contact.email}`} external={false}>
             メールで問い合わせる

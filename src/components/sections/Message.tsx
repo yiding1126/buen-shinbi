@@ -4,7 +4,8 @@ import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
 const paragraph = [
-  "武術を愛する皆さまとともに、演武を楽しみ、",
+  "武術を愛する皆さまとともに、",
+  "演武を楽しみ、",
   "新たな縁を育む一日をつくることができれば幸いです。",
   "皆さまのご参加を心よりお待ちしております。",
 ];
@@ -30,7 +31,7 @@ export function Message() {
             ))}
           </p>
 
-          <div className="flex flex-col gap-1 font-serif text-base text-ink/80 md:text-lg">
+          <div className="flex w-full flex-col gap-1 text-right font-serif text-base text-ink/80 md:text-lg">
             <p>劉武術協会 代表</p>
             <p>劉 一丁</p>
           </div>

@@ -54,3 +54,22 @@ export function CarIcon(props: SVGProps<SVGSVGElement>) {
     </svg>
   );
 }
+
+export function InstagramIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg {...base(props)}>
+      <rect x="3.5" y="3.5" width="17" height="17" rx="5" />
+      <circle cx="12" cy="12" r="4.2" />
+      <circle cx="16.8" cy="7.2" r="0.9" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
+
+export function YoutubeIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg {...base(props)}>
+      <rect x="2.5" y="5.5" width="19" height="13" rx="4" />
+      <path d="M10.3 9.3l5 2.7-5 2.7z" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
