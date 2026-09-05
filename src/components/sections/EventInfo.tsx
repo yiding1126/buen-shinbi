@@ -1,23 +1,20 @@
+import { Badge } from "@/components/ui/Badge";
 import { Container } from "@/components/ui/Container";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { CalendarIcon, PinIcon } from "@/components/ui/icons";
 import { event, organizer, venue } from "@/lib/content";
 
 const rows = [
   {
     label: "日時",
     value: `${event.dateLabel}　${event.timeLabel}`,
-    emphasis: true,
+    Icon: CalendarIcon,
   },
   {
     label: "会場",
     value: venue.name,
-    emphasis: false,
-  },
-  {
-    label: "観覧",
-    value: `${event.admissionLabel}・${event.registrationNote}`,
-    emphasis: true,
+    Icon: PinIcon,
   },
 ];
 
@@ -29,25 +26,24 @@ export function EventInfo() {
           <SectionHeading eyebrow="EVENT" title="開催概要" />
 
           <div className="flex flex-col divide-y divide-ink/10 border-y border-ink/10">
-            {rows.map((row) => (
-              <div
-                key={row.label}
-                className="flex flex-col gap-1 py-6 md:flex-row md:items-baseline md:justify-between md:gap-6"
-              >
-                <span className="font-sans text-sm tracking-widest text-ink/50">
-                  {row.label}
-                </span>
-                <span
-                  className={
-                    row.emphasis
-                      ? "font-serif text-lg text-ink md:text-xl"
-                      : "font-serif text-base text-ink/80 md:text-lg"
-                  }
-                >
-                  {row.value}
-                </span>
+            {rows.map(({ label, value, Icon }) => (
+              <div key={label} className="flex items-start gap-4 py-6">
+                <Icon className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                <div className="flex flex-col gap-1">
+                  <span className="font-sans text-xs tracking-widest text-ink/50">
+                    {label}
+                  </span>
+                  <span className="font-serif text-lg text-ink md:text-xl">
+                    {value}
+                  </span>
+                </div>
               </div>
             ))}
+          </div>
+
+          <div className="flex flex-wrap gap-3">
+            <Badge>{event.admissionLabel}</Badge>
+            <Badge>{event.registrationNote}</Badge>
           </div>
 
           <div className="flex flex-col gap-1 font-serif text-sm text-ink/60 md:text-base">

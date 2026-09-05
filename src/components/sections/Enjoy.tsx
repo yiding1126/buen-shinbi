@@ -30,12 +30,12 @@ export function Enjoy() {
               <a
                 key={card.href}
                 href={card.href}
-                className="group relative flex flex-col justify-between overflow-hidden border border-ink/10 bg-background px-6 py-8 transition-colors duration-300 hover:border-primary/40"
+                className="group relative flex flex-col justify-between overflow-hidden rounded-sm border border-ink/10 bg-background px-6 py-10 transition-colors duration-300 hover:border-primary/40"
               >
                 <DecorativeMotif
                   src={card.motif}
-                  opacity={0.14}
-                  className="absolute -bottom-6 -right-6 h-32 w-32"
+                  opacity={0.16}
+                  className="absolute -bottom-8 -right-8 h-40 w-40"
                 />
                 <p className="relative z-10 font-serif text-xl leading-relaxed text-ink">
                   {card.heading.map((line, index) => (

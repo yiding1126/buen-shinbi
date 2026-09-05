@@ -43,7 +43,7 @@ export function FinalAction() {
             </div>
           ) : null}
 
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 border-t border-ink/10 pt-10 md:border-t-0 md:border-l md:pt-0 md:pl-8">
             <h3 className="font-serif text-lg text-ink md:text-xl">
               観覧をご希望の方
             </h3>
