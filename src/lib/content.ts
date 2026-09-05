@@ -10,7 +10,9 @@ export const event = {
   type: "太極拳・中国武術 演武交流会",
   dateLabel: "2027年5月30日（日）",
   dateShort: "2027.5.30 SUN",
-  timeLabel: "10:00〜16:00（予定）",
+  // スマホ版Hero画像（2027/9/5）記載の時刻。サイト全体に反映済み。
+  doorsOpenLabel: "10:00",
+  timeLabel: "10:30〜15:30",
   admissionLabel: "入場無料",
   registrationNote: "事前申込不要",
 } as const;

@@ -8,7 +8,7 @@ import { event, organizer, venue } from "@/lib/content";
 const rows = [
   {
     label: "日時",
-    value: `${event.dateLabel}　${event.timeLabel}`,
+    value: `${event.dateLabel}　開場${event.doorsOpenLabel}／開演${event.timeLabel}`,
     Icon: CalendarIcon,
   },
   {
