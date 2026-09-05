@@ -24,7 +24,7 @@ export function Contact() {
             メールで問い合わせる
           </CtaButton>
 
-          <p className="font-sans text-sm leading-loose text-ink/60">
+          <p className="font-serif text-sm leading-loose text-ink/60">
             お問い合わせの際は、チーム名・お名前・お問い合わせ内容をご記載ください。
           </p>
         </FadeIn>

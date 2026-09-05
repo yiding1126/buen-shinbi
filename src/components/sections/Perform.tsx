@@ -122,7 +122,7 @@ export function Perform() {
             ))}
           </div>
 
-          <p className="font-sans text-sm leading-loose text-ink/60">
+          <p className="font-serif text-sm leading-loose text-ink/60">
             演武エリア・服装・器械・音楽・お支払い方法など、
             出演に関する詳細は開催要綱をご確認ください。
           </p>
