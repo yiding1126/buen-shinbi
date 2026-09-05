@@ -5,7 +5,7 @@ type CtaButtonProps = {
   children: ReactNode;
   external?: boolean;
   size?: "default" | "compact" | "large";
-  variant?: "primary" | "secondary";
+  variant?: "primary" | "secondary" | "inverted";
   className?: string;
 };
 
@@ -19,6 +19,7 @@ const variantClasses = {
   primary: "border-primary bg-primary text-white hover:bg-primary/90",
   secondary:
     "border-primary/60 bg-transparent text-primary hover:bg-primary/5",
+  inverted: "border-background bg-background text-primary hover:bg-background/90",
 } as const;
 
 export function CtaButton({

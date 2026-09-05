@@ -8,13 +8,39 @@ import { event, participation, venue } from "@/lib/content";
 
 export function Hero() {
   return (
-    <section
-      id="top"
-      className="relative scroll-mt-16 overflow-hidden bg-gradient-to-b from-background-warm to-background md:scroll-mt-20"
-    >
-      {/* PC用の背景装飾。モバイルではfv-mobile.png側に同等の装飾が
-          描き込まれているため非表示にする */}
-      <div className="hidden md:block">
+    <section id="top" className="relative scroll-mt-16 md:scroll-mt-20">
+      {/* モバイル: デザイン画像＋反転CTA帯（ともに画面幅いっぱい） */}
+      <div className="md:hidden">
+        <FadeIn>
+          <h1 className="sr-only">{event.name}</h1>
+          <p className="sr-only">
+            {event.type}／{event.dateLabel}　開場{event.doorsOpenLabel}・
+            開演{event.timeLabel}／{venue.name}／{event.admissionLabel}
+          </p>
+          <Image
+            src="/images/hero/fv-mobile.png"
+            alt=""
+            width={1080}
+            height={1700}
+            priority
+            sizes="100vw"
+            className="h-auto w-full"
+          />
+        </FadeIn>
+        <FadeIn className="flex items-center justify-center bg-primary py-12">
+          <CtaButton
+            href={participation.applicationFormUrl}
+            variant="inverted"
+            size="large"
+          >
+            出演を申し込む
+            <span aria-hidden="true">→</span>
+          </CtaButton>
+        </FadeIn>
+      </div>
+
+      {/* PC: 実テキスト＋個別素材で構成 */}
+      <div className="relative hidden overflow-hidden bg-gradient-to-b from-background-warm to-background md:block">
         <DecorativeMotif
           src="/images/optimized/watercolor-purple-mountain-02.png"
           opacity={0.35}
@@ -44,30 +70,9 @@ export function Hero() {
           opacity={0.35}
           className="absolute right-3 top-3 h-20 w-20 sm:h-28 sm:w-28 md:h-36 md:w-36"
         />
-      </div>
 
-      <Container className="relative z-10 flex min-h-[75svh] flex-col items-center justify-center gap-7 pt-14 pb-16 text-center lg:min-h-[80svh]">
-        <FadeIn className="flex w-full flex-col items-center gap-7">
-          {/* モバイル: デザイン画像を画面幅いっぱいに表示（Containerの左右余白を打ち消す） */}
-          <div className="-mx-6 w-[calc(100%+3rem)] md:hidden">
-            <h1 className="sr-only">{event.name}</h1>
-            <p className="sr-only">
-              {event.type}／{event.dateLabel}　開場{event.doorsOpenLabel}・
-              開演{event.timeLabel}／{venue.name}／{event.admissionLabel}
-            </p>
-            <Image
-              src="/images/hero/fv-mobile.png"
-              alt=""
-              width={1080}
-              height={1700}
-              priority
-              sizes="100vw"
-              className="h-auto w-full"
-            />
-          </div>
-
-          {/* PC: 実テキスト＋個別素材で構成 */}
-          <div className="hidden flex-col items-center gap-7 md:flex">
+        <Container className="relative z-10 flex min-h-[75svh] flex-col items-center justify-center gap-7 py-16 text-center lg:min-h-[80svh]">
+          <FadeIn className="flex flex-col items-center gap-7">
             <div className="relative flex items-center justify-center">
               <DecorativeMotif
                 src="/images/optimized/enso.png"
@@ -92,7 +97,9 @@ export function Hero() {
                   </span>
                 ))}
               </h1>
-              <p className="font-serif text-base text-ink/70">{event.type}</p>
+              <p className="font-serif text-base text-ink/70">
+                {event.type}
+              </p>
             </div>
 
             <div className="flex flex-col items-center gap-1.5 font-serif">
@@ -104,18 +111,14 @@ export function Hero() {
             </div>
 
             <Badge>{event.admissionLabel}</Badge>
-          </div>
 
-          <CtaButton href={participation.applicationFormUrl} size="large">
-            出演を申し込む
-            <span aria-hidden="true">→</span>
-          </CtaButton>
-
-          <span className="mt-2 font-sans text-[10px] tracking-[0.3em] text-ink/40">
-            SCROLL ↓
-          </span>
-        </FadeIn>
-      </Container>
+            <CtaButton href={participation.applicationFormUrl} size="large">
+              出演を申し込む
+              <span aria-hidden="true">→</span>
+            </CtaButton>
+          </FadeIn>
+        </Container>
+      </div>
     </section>
   );
 }
