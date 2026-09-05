@@ -7,6 +7,11 @@ type DecorativeMotifProps = {
   // className must include a position (absolute/relative/fixed) and a size;
   // this component has no default position so it never fights the caller's.
   className?: string;
+  // "contain" (default) keeps the whole motif visible, unscaled/uncropped.
+  // "cover" fills the box and crops — use with `position` to pick which
+  // part of the (square) source shows, e.g. a mountain/water strip.
+  fit?: "contain" | "cover";
+  position?: string;
 };
 
 export function DecorativeMotif({
@@ -14,6 +19,8 @@ export function DecorativeMotif({
   alt = "",
   opacity = 0.15,
   className = "",
+  fit = "contain",
+  position = "center",
 }: DecorativeMotifProps) {
   return (
     <div
@@ -26,7 +33,8 @@ export function DecorativeMotif({
         alt={alt}
         fill
         sizes="(min-width: 1024px) 900px, 130vw"
-        className="object-contain"
+        className={fit === "cover" ? "object-cover" : "object-contain"}
+        style={{ objectPosition: position }}
       />
     </div>
   );

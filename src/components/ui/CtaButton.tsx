@@ -25,7 +25,7 @@ export function CtaButton({
     <a
       href={href}
       {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-      className={`inline-flex items-center justify-center rounded-sm border border-primary bg-primary font-sans tracking-wide text-white transition-colors duration-300 hover:bg-primary/90 ${sizeClasses[size]} ${className}`}
+      className={`inline-flex items-center justify-center gap-2 rounded-md border border-primary bg-primary font-sans tracking-wide text-white transition-colors duration-300 hover:bg-primary/90 ${sizeClasses[size]} ${className}`}
     >
       {children}
     </a>
