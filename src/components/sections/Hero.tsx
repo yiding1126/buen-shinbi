@@ -27,7 +27,7 @@ export function Hero() {
             className="h-auto w-full"
           />
         </FadeIn>
-        <FadeIn className="flex items-center justify-center bg-background-warm py-12">
+        <FadeIn className="flex flex-col items-center justify-center gap-4 bg-[#faf6eb] py-12">
           <CtaButton
             href={participation.applicationFormUrl}
             size="large"
@@ -35,6 +35,9 @@ export function Hero() {
             出演を申し込む
             <span aria-hidden="true">→</span>
           </CtaButton>
+          <span className="font-sans text-[10px] tracking-[0.3em] text-ink/40">
+            SCROLL ↓
+          </span>
         </FadeIn>
       </div>
 
@@ -115,6 +118,10 @@ export function Hero() {
               出演を申し込む
               <span aria-hidden="true">→</span>
             </CtaButton>
+
+            <span className="mt-2 font-sans text-[10px] tracking-[0.3em] text-ink/40">
+              SCROLL ↓
+            </span>
           </FadeIn>
         </Container>
       </div>
