@@ -47,7 +47,6 @@ export function EventInfo() {
 
           <div className="flex flex-wrap gap-3">
             <Badge>{event.admissionLabel}</Badge>
-            <Badge>{event.registrationNote}</Badge>
           </div>
 
           <div className="flex flex-col gap-1 font-serif text-sm text-ink/60 md:text-base">
