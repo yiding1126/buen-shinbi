@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { CtaButton } from "@/components/ui/CtaButton";
 
 type NavLink = {
@@ -52,52 +53,55 @@ export function MobileNav({ navLinks, formUrl }: MobileNavProps) {
         />
       </button>
 
-      {open ? (
-        <>
-          <button
-            type="button"
-            aria-label="メニューを閉じる"
-            onClick={() => setOpen(false)}
-            className="fixed inset-0 z-[60] bg-ink/30"
-          />
-          <div
-            id="mobile-nav-panel"
-            role="dialog"
-            aria-modal="true"
-            aria-label="メニュー"
-            className="fixed inset-y-0 right-0 z-[70] flex w-[78%] max-w-xs flex-col gap-8 border-l border-ink/10 bg-background px-8 py-8"
-          >
-            <div className="flex justify-end">
+      {open && typeof document !== "undefined"
+        ? createPortal(
+            <>
               <button
                 type="button"
-                onClick={() => setOpen(false)}
                 aria-label="メニューを閉じる"
-                className="text-2xl leading-none text-ink/60 transition-colors duration-300 hover:text-primary"
+                onClick={() => setOpen(false)}
+                className="fixed inset-0 z-[60] bg-ink/30"
+              />
+              <div
+                id="mobile-nav-panel"
+                role="dialog"
+                aria-modal="true"
+                aria-label="メニュー"
+                className="fixed inset-y-0 right-0 z-[70] flex w-[78%] max-w-xs flex-col gap-8 border-l border-ink/10 bg-background px-8 py-8"
               >
-                ×
-              </button>
-            </div>
+                <div className="flex justify-end">
+                  <button
+                    type="button"
+                    onClick={() => setOpen(false)}
+                    aria-label="メニューを閉じる"
+                    className="text-2xl leading-none text-ink/60 transition-colors duration-300 hover:text-primary"
+                  >
+                    ×
+                  </button>
+                </div>
 
-            <nav className="flex flex-col gap-6 font-sans text-base text-ink/80">
-              {navLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setOpen(false)}
-                  className="transition-colors duration-300 hover:text-primary"
-                >
-                  {link.label}
-                </a>
-              ))}
-            </nav>
+                <nav className="flex flex-col gap-6 font-sans text-base text-ink/80">
+                  {navLinks.map((link) => (
+                    <a
+                      key={link.href}
+                      href={link.href}
+                      onClick={() => setOpen(false)}
+                      className="transition-colors duration-300 hover:text-primary"
+                    >
+                      {link.label}
+                    </a>
+                  ))}
+                </nav>
 
-            <CtaButton href={formUrl} className="mt-auto w-full">
-              出演を申し込む
-              <span aria-hidden="true">→</span>
-            </CtaButton>
-          </div>
-        </>
-      ) : null}
+                <CtaButton href={formUrl} className="mt-auto w-full">
+                  出演を申し込む
+                  <span aria-hidden="true">→</span>
+                </CtaButton>
+              </div>
+            </>,
+            document.body,
+          )
+        : null}
     </div>
   );
 }

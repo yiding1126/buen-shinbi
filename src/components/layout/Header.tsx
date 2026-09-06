@@ -22,12 +22,12 @@ export function Header() {
       <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-6 md:h-20 md:px-10">
         <a href="#top" aria-label="武縁心美2027 トップへ" className="shrink-0">
           <Image
-            src="/images/logo/buen-shinbi-logo.png"
+            src="/images/logo/buen-shinbi-header-logo.png"
             alt="武縁心美2027"
             width={112}
             height={112}
             priority
-            className="h-11 w-11 mix-blend-multiply md:h-14 md:w-14"
+            className="h-11 w-11 md:h-14 md:w-14"
           />
         </a>
 
