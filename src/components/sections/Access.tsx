@@ -4,6 +4,7 @@ import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { CarIcon, TrainIcon } from "@/components/ui/icons";
 import { venue } from "@/lib/content";
+import { VenuePhotoSlider } from "./VenuePhotoSlider";
 
 const rows = [
   { label: "電車", value: venue.accessLabel, Icon: TrainIcon },
@@ -25,6 +26,8 @@ export function Access() {
               〒{venue.postalCode}　{venue.address}
             </p>
           </div>
+
+          <VenuePhotoSlider />
 
           <div className="flex flex-col divide-y divide-ink/10 border-y border-ink/10">
             {rows.map(({ label, value, Icon }) => (
