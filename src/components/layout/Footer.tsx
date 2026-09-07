@@ -43,6 +43,8 @@ export function Footer() {
         {links.eventGuidelinesPdf ? (
           <a
             href={links.eventGuidelinesPdf}
+            target="_blank"
+            rel="noopener noreferrer"
             className="font-sans text-sm text-primary underline underline-offset-4"
           >
             開催要綱
