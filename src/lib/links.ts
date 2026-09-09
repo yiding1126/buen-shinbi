@@ -7,7 +7,7 @@ export const links = {
   // リポジトリに直接置くとサイトが重くなるため、Googleドライブでの
   // 共有リンクを使用する。
   eventGuidelinesPdf:
-    "https://drive.google.com/file/d/1Gcm_LFT5wxqTXh1HcCsC0OS0RWLq97S8/view?usp=sharing" as
+    "https://drive.google.com/file/d/1ie3zGd9iHMRK1WLvCFNDwLTb6FTwryGg/view?usp=sharing" as
       | string
       | null,
   facebook: null as string | null,
