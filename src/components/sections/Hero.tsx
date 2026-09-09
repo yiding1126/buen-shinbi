@@ -18,7 +18,7 @@ export function Hero() {
             開演{event.timeLabel}／{venue.name}／{event.admissionLabel}
           </p>
           <Image
-            src="/images/hero/fv-mobile.png"
+            src="/images/hero/fv-mobile-v2.png"
             alt=""
             width={1080}
             height={1700}
