@@ -6,15 +6,21 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { links } from "@/lib/links";
 import { participation } from "@/lib/content";
 
-const mainCopy = ["仲間と一緒に、", "武術・太極拳を楽しみませんか？"];
+const mainCopy = ["いつもの仲間と、", "いつもと違う舞台へ。"];
 
 const bodyParagraphs: string[][] = [
+  [
+    "普段ともに稽古している仲間と、",
+    "ひとつの演武をつくり、同じ舞台に立つ。",
+    "そんな特別な時間も、集団演武ならではの魅力です。",
+  ],
   [
     "武縁心美では、全国の太極拳・中国武術の",
     "団体・チームの皆さまを募集しています。",
   ],
   [
-    "太極拳・拳術・伝統拳など、種目を問わず、経験や競技レベルにかかわらずご参加いただけます。",
+    "太極拳・拳術・伝統拳など、種目を問わず、",
+    "経験や競技レベルにかかわらずご参加いただけます。",
   ],
 ];
 
