@@ -14,6 +14,7 @@ const ogImage = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://buen-shinbi.vercel.app"),
   title,
   description,
   openGraph: {
