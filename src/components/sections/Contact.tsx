@@ -7,8 +7,8 @@ import { contact } from "@/lib/content";
 export function Contact() {
   return (
     <section id="contact" className="scroll-mt-16 bg-background md:scroll-mt-20">
-      <Container className="py-20 md:py-28">
-        <FadeIn className="mx-auto flex max-w-2xl flex-col gap-8">
+      <Container className="py-12 md:py-20">
+        <FadeIn className="mx-auto flex max-w-2xl flex-col gap-6">
           <SectionHeading eyebrow="CONTACT" title="お問い合わせ" />
 
           <div className="flex flex-col gap-1">

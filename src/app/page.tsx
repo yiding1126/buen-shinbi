@@ -4,12 +4,9 @@ import { Header } from "@/components/layout/Header";
 import { Access } from "@/components/sections/Access";
 import { Concept } from "@/components/sections/Concept";
 import { Contact } from "@/components/sections/Contact";
-import { Enjoy } from "@/components/sections/Enjoy";
 import { EventInfo } from "@/components/sections/EventInfo";
 import { Hero } from "@/components/sections/Hero";
-import { Message } from "@/components/sections/Message";
 import { Perform } from "@/components/sections/Perform";
-import { Program } from "@/components/sections/Program";
 import { Watch } from "@/components/sections/Watch";
 
 export default function Home() {
@@ -18,14 +15,11 @@ export default function Home() {
       <Header />
       <main className="flex flex-1 flex-col">
         <Hero />
-        <Concept />
         <EventInfo />
-        <Enjoy />
+        <Concept />
         <Perform />
         <Watch />
-        <Program />
         <Access />
-        <Message />
         <Contact />
       </main>
       <Footer />

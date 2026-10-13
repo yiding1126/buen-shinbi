@@ -8,38 +8,20 @@ import { participation } from "@/lib/content";
 
 const mainCopy = ["いつもの仲間と、", "いつもと違う舞台へ。"];
 
-const bodyParagraphs: string[][] = [
-  [
-    "普段ともに稽古している仲間と、ひとつの演武をつくり、同じ舞台に立つ。",
-    "そんな特別な時間も、集団演武ならではの魅力です。",
-  ],
-  ["武縁心美では、全国の太極拳・中国武術の団体・チームの皆さまを募集しています。"],
-  [
-    "太極拳・拳術・伝統拳など、種目を問わず、経験や競技レベルにかかわらずご参加いただけます。",
-  ],
-];
-
-const exchangeParagraphs: string[][] = [
-  [
-    "普段なかなか交流する機会のない団体やチームと出会い、互いの演武に触れることも、武縁心美の楽しみのひとつです。",
-  ],
-  ["地域や所属の垣根を越えて、全国各地からのご参加をお待ちしています。"],
-];
-
 const stats = [
-  { label: "TEAM", value: `${participation.teamMinSize}名以上`, note: "1チームの人数" },
+  { label: "人数", value: `${participation.teamMinSize}名以上`, note: "1チームの人数" },
   {
-    label: "TIME",
+    label: "演武時間",
     value: `${participation.performanceTimeLimitMinutes}分以内`,
     note: "1チームの演武",
   },
   {
-    label: "FEE",
+    label: "参加費",
     value: `${participation.feePerPersonPerTeamYen.toLocaleString()}円`,
     note: "1名 / 1チーム",
   },
   {
-    label: "DEADLINE",
+    label: "締切",
     value: participation.applicationDeadlineLabel,
     note: "申込・振込期限",
   },
@@ -62,52 +44,11 @@ export function Perform() {
         className="absolute -left-10 bottom-10 h-48 w-48 md:h-64 md:w-64"
       />
 
-      <Container className="relative z-10 py-20 md:py-28">
-        <FadeIn className="mx-auto flex max-w-2xl flex-col gap-10">
+      <Container className="relative z-10 py-12 md:py-20">
+        <FadeIn className="mx-auto flex max-w-2xl flex-col gap-6">
           <SectionHeading eyebrow="PERFORM" title="出演する" />
 
-          <p className="font-serif text-xl leading-relaxed text-ink md:text-2xl">
-            {mainCopy.map((line, index) => (
-              <span key={index} className="block">
-                {line}
-              </span>
-            ))}
-          </p>
-
-          <div className="flex flex-col gap-6">
-            {bodyParagraphs.map((lines, index) => (
-              <p
-                key={index}
-                className="font-serif text-lg leading-loose text-ink md:text-xl"
-              >
-                {lines.map((line, i) => (
-                  <span key={i} className="block">
-                    {line}
-                  </span>
-                ))}
-              </p>
-            ))}
-          </div>
-
-          <div className="flex flex-col gap-4 border-t border-ink/10 pt-8">
-            <h3 className="font-serif text-lg text-ink md:text-xl">
-              演武を通じて、新しい交流を。
-            </h3>
-            {exchangeParagraphs.map((lines, index) => (
-              <p
-                key={index}
-                className="font-serif text-base leading-loose text-ink/80 md:text-lg"
-              >
-                {lines.map((line, i) => (
-                  <span key={i} className="block">
-                    {line}
-                  </span>
-                ))}
-              </p>
-            ))}
-          </div>
-
-          <div className="grid grid-cols-2 gap-4 border-y border-ink/10 py-8 md:grid-cols-4">
+          <div className="grid grid-cols-2 gap-x-6 gap-y-5 border-y border-ink/10 py-5 md:grid-cols-2">
             {stats.map((stat) => (
               <div key={stat.label} className="flex flex-col gap-1">
                 <span className="font-sans text-xs tracking-widest text-primary">
@@ -122,6 +63,18 @@ export function Perform() {
               </div>
             ))}
           </div>
+
+          <p className="font-serif text-xl leading-relaxed text-ink md:text-2xl">
+            {mainCopy.map((line, index) => (
+              <span key={index} className="block">
+                {line}
+              </span>
+            ))}
+          </p>
+
+          <p className="font-serif text-base leading-loose text-ink md:text-lg">
+            全国の太極拳・中国武術の団体・チームを募集しています。種目や経験、競技レベルを問わず、仲間とともに舞台へ。地域や所属を越えた交流をお楽しみください。
+          </p>
 
           <p className="font-serif text-sm leading-loose text-ink/60">
             演武エリア・服装・器械・音楽・お支払い方法など、

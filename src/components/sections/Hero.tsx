@@ -1,10 +1,9 @@
 import Image from "next/image";
-import { Badge } from "@/components/ui/Badge";
 import { Container } from "@/components/ui/Container";
 import { CtaButton } from "@/components/ui/CtaButton";
 import { DecorativeMotif } from "@/components/ui/DecorativeMotif";
 import { FadeIn } from "@/components/ui/FadeIn";
-import { event, participation, venue } from "@/lib/content";
+import { event, participation } from "@/lib/content";
 
 export function Hero() {
   return (
@@ -13,10 +12,6 @@ export function Hero() {
       <div className="md:hidden">
         <FadeIn>
           <h1 className="sr-only">{event.name}</h1>
-          <p className="sr-only">
-            {event.type}／{event.dateLabel}　開場{event.doorsOpenLabel}・
-            開演{event.timeLabel}／{venue.name}／{event.admissionLabel}
-          </p>
           <Image
             src="/images/hero/fv-mobile-v2.png"
             alt=""
@@ -26,18 +21,6 @@ export function Hero() {
             sizes="100vw"
             className="h-auto w-full"
           />
-        </FadeIn>
-        <FadeIn className="flex flex-col items-center justify-center gap-4 bg-[#faf6eb] py-12">
-          <CtaButton
-            href={participation.applicationFormUrl}
-            size="large"
-          >
-            出演を申し込む
-            <span aria-hidden="true">→</span>
-          </CtaButton>
-          <span className="font-sans text-[10px] tracking-[0.3em] text-ink/40">
-            SCROLL ↓
-          </span>
         </FadeIn>
       </div>
 
@@ -73,7 +56,7 @@ export function Hero() {
           className="absolute right-3 top-3 h-20 w-20 sm:h-28 sm:w-28 md:h-36 md:w-36"
         />
 
-        <Container className="relative z-10 flex min-h-[75svh] flex-col items-center justify-center gap-7 py-16 text-center lg:min-h-[80svh]">
+        <Container className="relative z-10 flex min-h-[65svh] flex-col items-center justify-center gap-7 py-16 text-center lg:min-h-[70svh]">
           <FadeIn className="flex flex-col items-center gap-7">
             <div className="relative flex items-center justify-center">
               <DecorativeMotif
@@ -103,16 +86,6 @@ export function Hero() {
                 {event.type}
               </p>
             </div>
-
-            <div className="flex flex-col items-center gap-1.5 font-serif">
-              <p className="text-lg text-ink">{event.dateLabel}</p>
-              <p className="text-base text-ink/70">
-                開場{event.doorsOpenLabel}／開演{event.timeLabel}
-              </p>
-              <p className="text-base text-ink/70">{venue.name}</p>
-            </div>
-
-            <Badge>{event.admissionLabel}</Badge>
 
             <CtaButton href={participation.applicationFormUrl} size="large">
               出演を申し込む

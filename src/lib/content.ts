@@ -53,8 +53,8 @@ export const contact = {
 export const social = {
   instagram: {
     // 「武縁心美公式Instagram」等の表記はしない（仕様書25章）
-    label: "劉一丁 Instagram",
-    url: "https://www.instagram.com/liuyiding2810/",
+    label: "LIU武術協会 Instagram",
+    url: "https://www.instagram.com/liu_wushu2017/",
   },
   youtube: {
     // 「武縁心美公式YouTube」等の表記はしない（仕様書25章）
