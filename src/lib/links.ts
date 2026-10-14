@@ -5,7 +5,7 @@
 export const links = {
   // ユーザー指定の開催要綱。Googleドライブの共有リンクを使用する。
   eventGuidelinesPdf:
-    "https://drive.google.com/file/d/1jKU6NHEk7c_GW5wG9wsvwJx4ZVJGwENL/view?usp=sharing" as
+    "https://drive.google.com/file/d/1Yya3yT9BgQrWWjOfrhjmjaDx4GHF-oCX/view?usp=sharing" as
       | string
       | null,
   facebook: null as string | null,
