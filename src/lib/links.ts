@@ -3,11 +3,9 @@
 // lib/content.ts 側で管理する。
 // null の項目は「後日設定」。利用側は null なら該当リンク/CTAを描画しない。
 export const links = {
-  // 2027/8/29版（事実情報の正としてユーザー確認済み）。約30MBあり
-  // リポジトリに直接置くとサイトが重くなるため、Googleドライブでの
-  // 共有リンクを使用する。
+  // ユーザー指定の開催要綱。Googleドライブの共有リンクを使用する。
   eventGuidelinesPdf:
-    "https://drive.google.com/file/d/1ie3zGd9iHMRK1WLvCFNDwLTb6FTwryGg/view?usp=sharing" as
+    "https://drive.google.com/file/d/1jKU6NHEk7c_GW5wG9wsvwJx4ZVJGwENL/view?usp=sharing" as
       | string
       | null,
   facebook: null as string | null,
